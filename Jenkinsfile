@@ -1,7 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        label "slave"
+    }
     tools {
-        maven "3.6.3"
+        maven "maven"
     }
     stages {
         stage('Clean and Install') {
